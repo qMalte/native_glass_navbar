@@ -1,3 +1,8 @@
+## 1.0.2
+
+-   Added support for custom image asset icons in tab bar items and action buttons.
+-   Added an example screen demonstrating custom icon assets.
+
 ## 1.0.1
 
 -   Added documentation for public API members.
