@@ -20,7 +20,7 @@ class _DemoPageState extends State<DemoPage> {
 
   bool _isBackgroundItemsEnabled = false;
 
-  List<NativeGlassNavBarItem> _tabs = [
+  final List<NativeGlassNavBarItem> _tabs = [
     NativeGlassNavBarItem(label: 'Home', symbol: 'heart.fill'),
     NativeGlassNavBarItem(label: 'Search', symbol: 'magnifyingglass'),
     NativeGlassNavBarItem(label: 'Settings', symbol: 'gear'),
@@ -55,7 +55,7 @@ class _DemoPageState extends State<DemoPage> {
     setState(() {
       _tabs.removeAt(index);
       if (_currentIndex >= _tabs.length) {
-        _currentIndex = _tabs.length > 0 ? _tabs.length - 1 : 0;
+        _currentIndex = _tabs.isNotEmpty ? _tabs.length - 1 : 0;
       }
       _refreshKey++;
     });
@@ -273,7 +273,7 @@ class _DemoPageState extends State<DemoPage> {
             ? TabBarActionButton(
                 symbol: _actionButtonSymbol,
                 onTap: () {
-                  print('Action button tapped');
+                  debugPrint('Action button tapped');
                   ScaffoldMessenger.of(
                     context,
                   ).showSnackBar(const SnackBar(content: Text('Action button tapped')));

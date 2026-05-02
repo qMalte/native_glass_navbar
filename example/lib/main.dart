@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'action_button_counter.dart';
 import 'basic_two_tabs.dart';
 import 'custom_color_tabs.dart';
+import 'custom_icon_tabs.dart';
 import 'demo_page.dart';
 import 'fallback_demo.dart';
 
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: BorderSide(width: 1.5, color: Colors.grey.withOpacity(0.25)),
+          borderSide: BorderSide(width: 1.5, color: Colors.grey.withValues(alpha: 0.25)),
         ),
         floatingLabelStyle: const TextStyle(fontWeight: FontWeight.w600, fontSize: 18),
         contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
@@ -52,7 +53,7 @@ class MyApp extends StatelessWidget {
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: BorderSide(width: 1.5, color: Colors.grey.withOpacity(0.25)),
+          borderSide: BorderSide(width: 1.5, color: Colors.grey.withValues(alpha: 0.25)),
         ),
         floatingLabelStyle: const TextStyle(fontWeight: FontWeight.w600, fontSize: 18),
         contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
@@ -101,6 +102,12 @@ class HomePage extends StatelessWidget {
         description: 'Example with custom tint color',
         icon: Icons.color_lens_rounded,
         page: const CustomColorTabsApp(),
+      ),
+      _ExampleItem(
+        title: 'Custom Icons',
+        description: 'Use named image assets for tab and action button icons',
+        icon: Icons.widgets_rounded,
+        page: const CustomIconTabsApp(),
       ),
       _ExampleItem(
         title: 'Fallback Demo',
