@@ -21,12 +21,6 @@ class _CustomIconTabsAppState extends State<CustomIconTabsApp> {
     NativeGlassNavBarItem(label: 'Profile', symbol: 'material_person'),
   ];
 
-  static const _fallbackDestinations = [
-    NavigationDestination(icon: Icon(Icons.home_rounded), label: 'Home'),
-    NavigationDestination(icon: Icon(Icons.search_rounded), label: 'Search'),
-    NavigationDestination(icon: Icon(Icons.person_rounded), label: 'Profile'),
-  ];
-
   @override
   Widget build(BuildContext context) {
     final ColorScheme colorScheme = Theme.of(context).colorScheme;
